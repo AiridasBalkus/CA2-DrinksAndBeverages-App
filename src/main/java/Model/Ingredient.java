@@ -38,6 +38,6 @@ public class Ingredient {
     }
     @Override
     public String toString() {
-        return "Ingredient name " + name + '\'' + ", description='" + description + '\'' + ", abv=" + abv + '}';
+        return "Ingredient name " + name + '\'' + ", description: " + description + '\'' + ", abv: " + abv ;
     }
 }
