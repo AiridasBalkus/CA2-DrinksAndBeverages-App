@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.RecipeController">
+    <top>
+        <Label text="Add a New Recipe" style="-fx-font-size: 18px; -fx-padding: 10px;"/>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10px;">
+            <TextField fx:id="drinkNameField" promptText="Drink Name"/>
+            <TextField fx:id="ingredientNameField" promptText="Ingredient Name"/>
+            <TextField fx:id="quantityField" promptText="Quantity (ml)"/>
+            <Button text="Add Recipe" onAction="#handleAddRecipe"/>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox spacing="10" style="-fx-padding: 10px;">
+            <Label text="Current Recipes:"/>
+            <ListView fx:id="recipesListView"/>
+        </VBox>
+    </bottom>
+</BorderPane>

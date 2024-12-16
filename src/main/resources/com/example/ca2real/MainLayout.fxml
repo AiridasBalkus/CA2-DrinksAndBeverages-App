@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.AppController">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Drinks">
+                    <MenuItem text="Add Drink" onAction="#openAddDrink"/>
+                    <MenuItem text="Delete Drink" onAction="#openDeleteDrink"/>
+                </Menu>
+                <Menu text="Ingredients">
+                    <MenuItem text="Add Ingredient" onAction="#openAddIngredient"/>
+                    <MenuItem text="Delete Ingredient" onAction="#openDeleteIngredient"/>
+                </Menu>
+                <Menu text="Recipes">
+                    <MenuItem text="Add Recipe" onAction="#openAddRecipe"/>
+                    <MenuItem text="Delete Recipe" onAction="#openDeleteRecipe"/>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <Label text="Welcome to the Drinks and Beverages Information System!" style="-fx-font-size: 16px; -fx-padding: 10px;"/>
+    </center>
+</BorderPane>
