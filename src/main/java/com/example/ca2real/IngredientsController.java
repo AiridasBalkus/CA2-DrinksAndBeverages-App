@@ -16,16 +16,14 @@ public class IngredientsController {
     @FXML
     private ListView<Ingredient> ingredientsListView;
 
-    private IngredientsList ingredientsList = new IngredientsList();
-
     @FXML
     private void handleAddIngredient() {
         String name = nameField.getText();
         String description = descriptionField.getText();
         double abv = Double.parseDouble(abvField.getText());
 
-        ingredientsList.addIngredient(name, description, abv);
-        ingredientsList.populateListView(ingredientsListView);
+        Ingredient newIngredient = DrinksBeveragesApp.newIList.addIngredient(name, description, abv);
+        populateIngredientsView();
 
         nameField.clear();
         descriptionField.clear();
@@ -35,9 +33,18 @@ public class IngredientsController {
     private void handleDeleteIngredient() {
         Ingredient selectedIngredient = ingredientsListView.getSelectionModel().getSelectedItem();
         if (selectedIngredient != null) {
-            ingredientsList.deleteIngredient(selectedIngredient);
-            ingredientsList.populateListView(ingredientsListView);
+            DrinksBeveragesApp.newIList.deleteIngredient(selectedIngredient);
+            DrinksBeveragesApp.newIList.populateListView(ingredientsListView);
         }
+    }
+
+    private void populateIngredientsView() {
+        DrinksBeveragesApp.newIList.populateListView(ingredientsListView);
+    }
+
+    @FXML
+    private void updateListView() {
+        populateIngredientsView();
     }
 }
 

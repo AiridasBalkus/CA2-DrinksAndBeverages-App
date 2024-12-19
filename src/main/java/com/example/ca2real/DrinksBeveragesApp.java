@@ -2,6 +2,7 @@ package com.example.ca2real;
 
 // Main Application class for the Drinks/Beverages
 import Model.DrinksList;
+import Model.IngredientsList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,6 +13,7 @@ import java.util.Objects;
 
 public class DrinksBeveragesApp extends Application {
     public static DrinksList newDList = new DrinksList(null);
+    public static IngredientsList newIList = new IngredientsList(null);
 
     @Override
     public void start(Stage primaryStage) throws Exception {

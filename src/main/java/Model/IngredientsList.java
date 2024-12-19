@@ -5,7 +5,11 @@ import javafx.scene.control.ListView;
 public class IngredientsList {
     private Ingredient head;
 
-    public void addIngredient(String name, String description, double abv) {
+    public IngredientsList(Ingredient head)
+    {this.head = null;
+    }
+
+    public Ingredient addIngredient(String name, String description, double abv) {
         Ingredient newIngredient = new Ingredient(name, description, abv);
         if (head == null) {
             head = newIngredient;
@@ -16,6 +20,7 @@ public class IngredientsList {
             }
             current.next = newIngredient;
         }
+        return newIngredient;
     }
 
     public void deleteIngredient(Ingredient ingredientToDelete) {

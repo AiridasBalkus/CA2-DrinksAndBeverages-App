@@ -16,6 +16,7 @@
             <TextField fx:id="descriptionField" promptText="Description"/>
             <TextField fx:id="abvField" promptText="ABV (Alcohol By Volume)"/>
             <Button text="Add Ingredient" onAction="#handleAddIngredient"/>
+            <Button text="Update" onAction="#updateListView"/>
         </VBox>
     </center>
     <bottom>

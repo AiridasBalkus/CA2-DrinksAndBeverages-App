@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.IngredientsController">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.IngredientsController">
     <top>
-        <Label text="Delete Ingredient" style="-fx-font-size: 18px; -fx-padding: 10px;"/>
+        <Label style="-fx-font-size: 18px; -fx-padding: 10px;" text="Delete Ingredient" />
     </top>
     <center>
         <VBox spacing="10" style="-fx-padding: 10px;">
-            <Label text="Select an Ingredient to Delete:"/>
-            <ListView fx:id="ingredientsListView"/>
-            <Button text="Delete Selected Ingredient" onAction="#handleDeleteIngredient"/>
+            <Label text="Select an Ingredient to Delete:" />
+            <Button onAction="#updateListView" text="Update" />
+            <ListView fx:id="ingredientsListView" />
+            <Button onAction="#handleDeleteIngredient" text="Delete Selected Ingredient" />
         </VBox>
     </center>
 </BorderPane>
