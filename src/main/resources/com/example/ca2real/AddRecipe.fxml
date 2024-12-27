@@ -16,6 +16,7 @@
             <TextField fx:id="ingredientNameField" promptText="Ingredient Name"/>
             <TextField fx:id="quantityField" promptText="Quantity (ml)"/>
             <Button text="Add Recipe" onAction="#handleAddRecipe"/>
+            <Button text="Update" onAction="#updateListView"/>
         </VBox>
     </center>
     <bottom>

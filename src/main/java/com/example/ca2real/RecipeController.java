@@ -17,16 +17,14 @@ public class RecipeController {
     @FXML
     private ListView<Recipe> recipesListView;
 
-    private RecipesList recipesList = new RecipesList();
-
     @FXML
     private void handleAddRecipe() {
         String drinkName = drinkNameField.getText();
         String ingredientName = ingredientNameField.getText();
         double quantity = Double.parseDouble(quantityField.getText());
 
-        recipesList.addRecipe(drinkName, ingredientName, quantity);
-        recipesList.populateListView(recipesListView);
+        DrinksBeveragesApp.newRList.addRecipe(drinkName, ingredientName, quantity);
+        populateRecipeView();
 
         drinkNameField.clear();
         ingredientNameField.clear();
@@ -37,8 +35,17 @@ public class RecipeController {
     private void handleDeleteRecipe() {
         Recipe selectedRecipe = recipesListView.getSelectionModel().getSelectedItem();
         if (selectedRecipe != null) {
-            recipesList.deleteRecipe(selectedRecipe);
-            recipesList.populateListView(recipesListView);
+            DrinksBeveragesApp.newRList.deleteRecipe(selectedRecipe);
+            populateRecipeView();
         }
+    }
+
+    private void populateRecipeView() {
+        DrinksBeveragesApp.newRList.populateListView(recipesListView);
+    }
+
+    @FXML
+    private void updateListView() {
+        populateRecipeView();
     }
 }

@@ -4,6 +4,9 @@ import javafx.scene.control.ListView;
 
 public class RecipesList {
     private Recipe head;
+    public RecipesList(Recipe head)
+    {this.head = null;
+    }
 
     public void addRecipe(String drinkName, String ingredientName, double quantity) {
         Recipe newRecipe = new Recipe(drinkName, ingredientName, quantity);
