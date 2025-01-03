@@ -102,4 +102,18 @@ public class AppController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void openSearching() {
+        try {
+            BorderPane search = FXMLLoader.load(getClass().getResource("Searching.fxml"));
+            Stage searching = new Stage();
+            searching.setTitle("Search");
+            Scene scene = new Scene(search);
+            searching.setScene(scene);
+            searching.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

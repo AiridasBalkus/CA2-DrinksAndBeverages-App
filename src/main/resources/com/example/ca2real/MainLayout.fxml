@@ -17,6 +17,9 @@
                     <MenuItem text="Add Recipe" onAction="#openAddRecipe"/>
                     <MenuItem text="Delete Recipe" onAction="#openDeleteRecipe"/>
                 </Menu>
+            <Menu text="Searching">
+                <MenuItem text = "Search" onAction="#openSearching"/>
+            </Menu>
             </menus>
         </MenuBar>
     </top>
