@@ -7,6 +7,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 public class DrinksController {
+    private FileController fileController = new FileController();
     @FXML
     private TextField nameField;
     @FXML
@@ -26,7 +27,7 @@ public class DrinksController {
         String description = descriptionField.getText();
         String imageUrl = imageUrlField.getText();
 
-       Drink newDrink = DrinksBeveragesApp.newDList.addDrink(name, origin, description, imageUrl);
+        Drink newDrink = DrinksBeveragesApp.newDList.addDrink(name, origin, description, imageUrl);
         populateDrinksView();
 
         nameField.clear();
@@ -51,5 +52,19 @@ public class DrinksController {
     @FXML
     private void updateListView() {
         populateDrinksView();
+    }
+
+    @FXML
+    public void saveDrinks() {
+        FileController.saveAll(DrinksBeveragesApp.newDList);
+    }
+
+    @FXML
+    public void loadDrinks() {
+        DrinksList loadedData = FileController.loadAll();
+        if (loadedData != null) {
+            DrinksBeveragesApp.newDList = loadedData;
+            // Optionally refresh the UI
+        }
     }
 }

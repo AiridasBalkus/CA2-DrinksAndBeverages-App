@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.DrinksController" style="-fx-font-family: 'Arial'; -fx-font-size: 14; -fx-padding: 10;" prefWidth="500" prefHeight="500">
+<BorderPane prefHeight="500" prefWidth="500" style="-fx-font-family: 'Arial'; -fx-font-size: 14; -fx-padding: 10;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.DrinksController">
     <top>
-        <Label text="Add a New Drink" style="-fx-font-size: 18px; -fx-padding: 10;" />
+        <Label style="-fx-font-size: 18px; -fx-padding: 10;" text="Add a New Drink" />
     </top>
     <center>
         <VBox spacing="10" style="-fx-padding: 10;">
@@ -16,8 +13,10 @@
             <TextField fx:id="originField" promptText="Origin" />
             <TextField fx:id="descriptionField" promptText="Description" />
             <TextField fx:id="imageUrlField" promptText="Image URL" />
-            <Button text="Add Drink" onAction="#handleAddDrink" />
-            <Button text="Update" onAction="#updateListView" />
+            <Button onAction="#handleAddDrink" text="Add Drink" />
+            <Button onAction="#updateListView" text="Update" />
+            <Button onAction="#saveDrinks" prefHeight="26.0" prefWidth="72.0" text="Save All" />
+            <Button onAction="#loadDrinks" text="Load All" />
         </VBox>
     </center>
     <bottom>
@@ -27,4 +26,3 @@
         </VBox>
     </bottom>
 </BorderPane>
-
