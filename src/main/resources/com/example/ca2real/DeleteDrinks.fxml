@@ -3,16 +3,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.DrinksController">
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.DrinksController" style="-fx-font-family: 'Arial'; -fx-font-size: 14; -fx-padding: 10;"  prefWidth="500" prefHeight="500">
     <top>
-        <Label style="-fx-font-size: 18px; -fx-padding: 10px;" text="Delete Drink" />
+        <Label text="Delete Drink" style="-fx-font-size: 18px; -fx-padding: 10;" />
     </top>
     <center>
-        <VBox spacing="10" style="-fx-padding: 10px;">
+        <VBox spacing="10" style="-fx-padding: 10;">
             <Label text="Select a Drink to Delete:" />
-            <Button onAction="#updateListView" text="Update" />
+            <Button text="Update" onAction="#updateListView" />
             <ListView fx:id="drinksListView" />
-            <Button onAction="#handleDeleteDrink" text="Delete Selected Drink" />
+            <Button text="Delete Selected Drink" onAction="#handleDeleteDrink" />
         </VBox>
     </center>
 </BorderPane>
+
