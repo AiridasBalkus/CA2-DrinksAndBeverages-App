@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.ca2real.SearchingController"
+            prefWidth="600" prefHeight="450" style="-fx-background-color: #f4f4f4;">
+    <children>
+        <!-- Header -->
+        <Label layoutX="20" layoutY="20" text="Search Drinks, Ingredients, and Recipes"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;" />
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.SearchingController">
-<top>
-    <Label style="-fx-font-size: 18px; -fx-padding: 10px;" text="Searching" />
-</top>
-<center>
-    <VBox spacing="10" style="-fx-padding: 10px;">
-        <Label text="Search Result:" />
-        <ListView fx:id="resultListView" />
-    </VBox>
-</center>
-</BorderPane>
+        <!-- Search Query Input -->
+        <Label layoutX="20" layoutY="70" text="Search Query:"
+               style="-fx-font-size: 14px;" />
+        <TextField fx:id="searchField" layoutX="120" layoutY="65" prefWidth="300"
+                   promptText="Enter search keyword..." style="-fx-padding: 5px;" />
+
+        <!-- Search Type Selection -->
+        <Label layoutX="20" layoutY="120" text="Search Type:"
+               style="-fx-font-size: 14px;" />
+        <ComboBox fx:id="searchTypeCombo" layoutX="120" layoutY="115" prefWidth="300"
+                  style="-fx-padding: 5px;" />
+
+        <!-- Search Button -->
+        <Button layoutX="450" layoutY="115" text="Search"
+                style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white;"
+                onAction="#handleSearch" />
+
+        <!-- Results Section -->
+        <Label layoutX="20" layoutY="170" text="Search Results:"
+               style="-fx-font-size: 14px;" />
+        <ListView fx:id="resultListView" layoutX="20" layoutY="200" prefWidth="560" prefHeight="220"
+                  style="-fx-padding: 5px; -fx-background-color: #ffffff; -fx-border-color: #cccccc;" />
+    </children>
+</AnchorPane>
+
+
+

@@ -3,7 +3,7 @@ package Model;
 import javafx.scene.control.ListView;
 
 public class IngredientsList {
-    private Ingredient head;
+    public Ingredient head;
 
     public IngredientsList(Ingredient head)
     {this.head = null;

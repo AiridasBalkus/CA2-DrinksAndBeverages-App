@@ -3,6 +3,7 @@ package com.example.ca2real;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -106,7 +107,8 @@ public class AppController {
     @FXML
     private void openSearching() {
         try {
-            BorderPane search = FXMLLoader.load(getClass().getResource("Searching.fxml"));
+            // Load the Searching.fxml layout as an AnchorPane
+            AnchorPane search = FXMLLoader.load(getClass().getResource("Searching.fxml"));
             Stage searching = new Stage();
             searching.setTitle("Search");
             Scene scene = new Scene(search);
