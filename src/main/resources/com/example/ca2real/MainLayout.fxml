@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.AppController">
+<?import javafx.geometry.*?>
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.AppController" style="-fx-background-color: #f5f5f5;">
     <top>
-        <MenuBar>
+        <MenuBar style="-fx-background-color: #6ed20a; -fx-text-fill: #050000;">
             <menus>
-                <Menu text="Drinks">
+                <Menu text="Drinks" style="-fx-text-fill: white;">
                     <MenuItem text="Add Drink" onAction="#openAddDrink"/>
                     <MenuItem text="Delete Drink" onAction="#openDeleteDrink"/>
                 </Menu>
-                <Menu text="Ingredients">
+                <Menu text="Ingredients" style="-fx-text-fill: white;">
                     <MenuItem text="Add Ingredient" onAction="#openAddIngredient"/>
                     <MenuItem text="Delete Ingredient" onAction="#openDeleteIngredient"/>
                 </Menu>
-                <Menu text="Recipes">
+                <Menu text="Recipes" style="-fx-text-fill: white;">
                     <MenuItem text="Add Recipe" onAction="#openAddRecipe"/>
                     <MenuItem text="Delete Recipe" onAction="#openDeleteRecipe"/>
                 </Menu>
-            <Menu text="Searching">
-                <MenuItem text = "Search" onAction="#openSearching"/>
-            </Menu>
+                <Menu text="Searching" style="-fx-text-fill: white;">
+                    <MenuItem text="Search" onAction="#openSearching"/>
+                </Menu>
             </menus>
         </MenuBar>
     </top>
     <center>
-        <Label text="Welcome to the Drinks and Beverages Information System!" style="-fx-font-size: 16px; -fx-padding: 10px;"/>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20px;">
+            <Label text="Welcome to the Drinks and Beverages Information System!"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+            <Label text="Select an option below to get started:"
+                   style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+            <HBox alignment="CENTER" spacing="20">
+                <Button text="Drinks" style="-fx-font-size: 14px; -fx-background-color: #3498db; -fx-text-fill: white;" onAction="#openAddDrink"/>
+                <Button text="Ingredients" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: white;" onAction="#openAddIngredient"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20">
+                <Button text="Recipes" style="-fx-font-size: 14px; -fx-background-color: #2ecc71; -fx-text-fill: white;" onAction="#openAddRecipe"/>
+                <Button text="Search" style="-fx-font-size: 14px; -fx-background-color: #f1c40f; -fx-text-fill: white;" onAction="#openSearching"/>
+            </HBox>
+        </VBox>
     </center>
 </BorderPane>
+
+
