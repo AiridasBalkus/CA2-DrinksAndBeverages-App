@@ -56,12 +56,12 @@ public class DrinksController {
 
     @FXML
     public void saveDrinks() {
-        FileController.saveAll(DrinksBeveragesApp.newDList);
+        FileController.saveDrinks(DrinksBeveragesApp.newDList);
     }
 
     @FXML
     public void loadDrinks() {
-        DrinksList loadedData = FileController.loadAll();
+        DrinksList loadedData = FileController.loadDrinks();
         if (loadedData != null) {
             DrinksBeveragesApp.newDList = loadedData;
             // Optionally refresh the UI

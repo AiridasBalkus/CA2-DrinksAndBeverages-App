@@ -1,6 +1,7 @@
 package com.example.ca2real;
 
 
+import Model.DrinksList;
 import Model.Recipe;
 import Model.RecipesList;
 import javafx.fxml.FXML;
@@ -47,5 +48,19 @@ public class RecipeController {
     @FXML
     private void updateListView() {
         populateRecipeView();
+    }
+
+    @FXML
+    public void saveRecipe() {
+        FileController.saveRecipe(DrinksBeveragesApp.newRList);
+    }
+
+    @FXML
+    public void loadRecipe() {
+        RecipesList loadedData = FileController.loadRecipe();
+        if (loadedData != null) {
+            DrinksBeveragesApp.newRList = loadedData;
+            // Optionally refresh the UI
+        }
     }
 }

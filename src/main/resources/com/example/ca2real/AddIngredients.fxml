@@ -17,6 +17,8 @@
             <TextField fx:id="abvField" promptText="ABV (Alcohol By Volume)" />
             <Button text="Add Ingredient" onAction="#handleAddIngredient" />
             <Button text="Update" onAction="#updateListView" />
+            <Button onAction="#saveIngredients" text="Save All" />
+            <Button onAction="#loadIngredients" text="Load All" />
         </VBox>
     </center>
     <bottom>

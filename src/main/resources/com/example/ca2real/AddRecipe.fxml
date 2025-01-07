@@ -17,6 +17,8 @@
             <TextField fx:id="quantityField" promptText="Quantity (ml)" />
             <Button text="Add Recipe" onAction="#handleAddRecipe" />
             <Button text="Update" onAction="#updateListView" />
+            <Button onAction="#saveRecipe" text="Save All" />
+            <Button onAction="#loadRecipe" text="Load All" />
         </VBox>
     </center>
     <bottom>

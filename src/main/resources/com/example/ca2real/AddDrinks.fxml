@@ -15,7 +15,7 @@
             <TextField fx:id="imageUrlField" promptText="Image URL" />
             <Button onAction="#handleAddDrink" text="Add Drink" />
             <Button onAction="#updateListView" text="Update" />
-            <Button onAction="#saveDrinks" prefHeight="26.0" prefWidth="72.0" text="Save All" />
+            <Button onAction="#saveDrinks" text="Save All" />
             <Button onAction="#loadDrinks" text="Load All" />
         </VBox>
     </center>

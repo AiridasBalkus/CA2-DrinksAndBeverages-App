@@ -16,6 +16,8 @@
             <Label text="Select a Recipe to Delete:"/>
             <ListView fx:id="recipesListView"/>
             <Button text="Delete Selected Recipe" onAction="#handleDeleteRecipe"/>
+            <Button onAction="#saveRecipe" text="Save All" />
+            <Button onAction="#loadRecipe" text="Load All" />
         </VBox>
     </center>
 </BorderPane>

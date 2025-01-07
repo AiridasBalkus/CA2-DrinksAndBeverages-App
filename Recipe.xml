@@ -1,0 +1,7 @@
+<Model.RecipesList>
+  <head>
+    <drinkName>Cocktail</drinkName>
+    <ingredientName>vodka</ingredientName>
+    <quantity>50.0</quantity>
+  </head>
+</Model.RecipesList>

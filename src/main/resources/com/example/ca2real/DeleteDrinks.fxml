@@ -13,6 +13,8 @@
             <Button text="Update" onAction="#updateListView" />
             <ListView fx:id="drinksListView" />
             <Button text="Delete Selected Drink" onAction="#handleDeleteDrink" />
+            <Button onAction="#saveDrinks" text="Save All" />
+            <Button onAction="#loadDrinks" text="Load All" />
         </VBox>
     </center>
 </BorderPane>
