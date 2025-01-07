@@ -38,6 +38,6 @@ public class Recipe {
     }
     @Override
     public String toString() {
-        return "Recipe{drinkName='" + drinkName + '\'' + ", ingredientName='" + ingredientName + '\'' + ", quantity=" + quantity + '}';
+        return "Recipe Name: '" + drinkName + '\'' + ", Ingredient Name: " + ingredientName + '\'' + ", quantity: " + quantity;
     }
 }

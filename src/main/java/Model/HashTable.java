@@ -1,3 +1,10 @@
+/*
+
+
+************IGNORE CLASS AS ITS NOT IMPLEMENETED**********
+
+
+
 package Model;
 
 // A generic HashTable implementation with key-value pairs
@@ -88,5 +95,5 @@ public class HashTable<K, V> {
         }
     }
 }
-
+*/
 

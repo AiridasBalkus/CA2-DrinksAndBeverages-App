@@ -25,7 +25,7 @@ public class DrinksBeveragesApp extends Application {
         BorderPane mainLayout = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainLayout.fxml")));
 
         // Set up the scene with a predefined size
-        Scene scene = new Scene(mainLayout, 800, 600);
+        Scene scene = new Scene(mainLayout, 1000, 800);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

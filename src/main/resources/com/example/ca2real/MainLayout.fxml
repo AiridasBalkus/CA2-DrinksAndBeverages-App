@@ -5,22 +5,22 @@
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca2real.AppController" style="-fx-font-family: 'Arial'; -fx-font-size: 14; -fx-padding: 10;">
     <top>
         <MenuBar>
-            <!-- Drinks Menu -->
+
             <Menu text="Drinks">
                 <MenuItem text="Add Drink" onAction="#openAddDrink" />
                 <MenuItem text="Delete Drink" onAction="#openDeleteDrink" />
             </Menu>
-            <!-- Ingredients Menu -->
+
             <Menu text="Ingredients">
                 <MenuItem text="Add Ingredient" onAction="#openAddIngredient" />
                 <MenuItem text="Delete Ingredient" onAction="#openDeleteIngredient" />
             </Menu>
-            <!-- Recipes Menu -->
+
             <Menu text="Recipes">
                 <MenuItem text="Add Recipe" onAction="#openAddRecipe" />
                 <MenuItem text="Delete Recipe" onAction="#openDeleteRecipe" />
             </Menu>
-            <!-- Search Menu -->
+
             <Menu text="Search">
                 <MenuItem text="Search" onAction="#openSearching" />
             </Menu>
